@@ -1,5 +1,5 @@
 #!/bin/zsh
 
 cd $HOME/Desktop/shared
-ifconfig | grep 192 | cut -f 2 -d" "
+ifconfig | grep 192.168
 python -m http.server

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "automate"
+version = "0.1.0"
+description = "A collection of automated tasks to make my job easier."
+authors = ["Thomas <thomas@cartlogic.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+PyAutoGUI = "^0.9.52"
+pynput = "^1.7.3"
+black = "^21.5b1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
