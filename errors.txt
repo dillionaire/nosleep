@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python@3.9/3.9.6/Frameworks/Python.framework/Versions/3.9/lib/python3.9/runpy.py", line 188, in _run_module_as_main
+    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+  File "/usr/local/Cellar/python@3.9/3.9.6/Frameworks/Python.framework/Versions/3.9/lib/python3.9/runpy.py", line 111, in _get_module_details
+    __import__(pkg_name)
+  File "/Users/thomas_simmons/Documents/Python/automate/nosleep.py", line 20, in <module>
+    keyboard.tap(Key.ctrl)
+KeyboardInterrupt
