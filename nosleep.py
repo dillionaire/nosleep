@@ -17,4 +17,4 @@ while not done:
         done = True
     else:
         keyboard.tap(Key.ctrl)
-        print("ZZZzzz...")
+        print(f'{datetime.datetime.now()}', end='\r\r')
