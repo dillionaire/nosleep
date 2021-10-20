@@ -134,4 +134,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
 .DS_Store
+=======
+
+# project stuff
+*.lock
+*.sh
+*.cfg
+*.toml
+.vscode
+>>>>>>> b682c4c361e7659f2075f19dcfbbd805b0d7cc88
