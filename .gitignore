@@ -132,3 +132,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# project stuff
+*.lock
+*.sh
+*.cfg
+*.toml
+.vscode
