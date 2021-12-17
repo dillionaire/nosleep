@@ -11,7 +11,7 @@ subprocess.call(['open', slack])
 
 done = False
 while not done:
-    time.sleep(random.randint(1, 60))
+    time.sleep(random.randint(1, 189))
     currenttime = datetime.datetime.now().strftime("%H%M%S")
     if (currenttime) >= "170000":
         done = True
