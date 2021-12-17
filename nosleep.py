@@ -24,3 +24,7 @@ def main():
             print(f'{datetime.datetime.now()}', end='\r\r')
 
     sys.stdout.write(f'Finished: {str(datetime.datetime.now().strftime("%Y%m%d - %H:%M:%S"))}')
+
+if __name__ == "__main__":
+    main()
+    sys.exit(0)
