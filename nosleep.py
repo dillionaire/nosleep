@@ -4,8 +4,20 @@ import time
 import subprocess
 from pynput.keyboard import Key, Controller as KeyboardController
 import sys
+import logging
 
+#Creating and Configuring Logger
+Log_Format = "%(levelname)s %(asctime)s - %(message)s"
 
+logging.basicConfig(filename = "nosleep.log",
+                    filemode = "w",
+                    format = Log_Format,
+                    level = logging.Debug)
+
+logger = logging.getLogger()
+
+#Testing our Logger
+logger.error("Test error, please ignore.")
 
 def main():
     sys.stdout.write(f'Started: {str(datetime.datetime.now().strftime("%Y%m%d - %H:%M:%S"))}')
