@@ -12,15 +12,12 @@ Log_Format = "%(levelname)s %(asctime)s - %(message)s"
 logging.basicConfig(filename = "nosleep.log",
                     filemode = "w",
                     format = Log_Format,
-                    level = logging.Debug)
+                    level = logging.DEBUG)
 
 logger = logging.getLogger()
-
-#Testing our Logger
-logger.error("Test error, please ignore.")
+logger.info("Started")
 
 def main():
-    sys.stdout.write(f'Started: {str(datetime.datetime.now().strftime("%Y%m%d - %H:%M:%S"))}')
     keyboard = KeyboardController()
     slack = r'/Applications/Slack.app'
     subprocess.call(['open', slack])
@@ -31,12 +28,9 @@ def main():
         currenttime = datetime.datetime.now().strftime("%H%M%S")
         if (currenttime) >= "170000":
             done = True
+            logger.info("Ended")
         else:
             keyboard.tap(Key.ctrl)
             print(f'{datetime.datetime.now()}', end='\r\r')
-
-    sys.stdout.write(f'Finished: {str(datetime.datetime.now().strftime("%Y%m%d - %H:%M:%S"))}')
-
-if __name__ == "__main__":
+            logger.info(f'{datetime.datetime.now()}')
     main()
-    sys.exit(0)
