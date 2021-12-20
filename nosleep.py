@@ -3,7 +3,6 @@ import random
 import time
 import subprocess
 from pynput.keyboard import Key, Controller as KeyboardController
-import sys
 import logging
 
 #Creating and Configuring Logger
@@ -33,4 +32,6 @@ def main():
             keyboard.tap(Key.ctrl)
             print(f'{datetime.datetime.now()}', end='\r\r')
             logger.info(f'{datetime.datetime.now()}')
+
+if __name__ == "__main__":
     main()
