@@ -14,9 +14,10 @@ logging.basicConfig(filename = "nosleep.log",
                     level = logging.DEBUG)
 
 logger = logging.getLogger()
-logger.info("Started")
+
 
 def main():
+    logger.info("Started")
     keyboard = KeyboardController()
     slack = r'/Applications/Slack.app'
     subprocess.call(['open', slack])
@@ -27,11 +28,11 @@ def main():
         currenttime = datetime.datetime.now().strftime("%H%M%S")
         if (currenttime) >= "170000":
             done = True
-            logger.info("Ended")
         else:
             keyboard.tap(Key.ctrl)
             print(f'{datetime.datetime.now()}', end='\r\r')
             logger.info(f'{datetime.datetime.now()}')
+    logger.info("Ended")
 
 if __name__ == "__main__":
     main()
