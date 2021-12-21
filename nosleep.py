@@ -4,6 +4,7 @@ import time
 import subprocess
 from pynput.keyboard import Key, Controller as KeyboardController
 import logging
+import sys
 
 #Creating and Configuring Logger
 Log_Format = "%(levelname)s %(asctime)s - %(message)s"
@@ -28,6 +29,8 @@ def main():
         currenttime = datetime.datetime.now().strftime("%H%M%S")
         if (currenttime) >= "170000":
             done = True
+            print('done')
+            sys.exit(0)
         else:
             keyboard.tap(Key.ctrl)
             print(f'{datetime.datetime.now()}', end='\r\r')
