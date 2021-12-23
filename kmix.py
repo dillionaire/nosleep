@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 
+""" kmix.py: create a new list of words containing the brand name and keywords
+    formatted for google ads and copies it to the clipboard."""
+
+__author__      = "G. Thomas Simmons"
+__copyright__   = "MIT License"
+
 import subprocess
 import platform
 
 def main():
-    """ User inputs the brand name and keywords, and the script will create a new
-    list of words containing the brand name and keywords formatted for google ads
-    and copy it to the clipboard."""
+    """ User inputs the brand name and keywords and the program creates a new list."""
 
     brandname = input("Enter comma seperated branded terms: ")
     keywords = input("Enter comma seperated product keywords: ")
@@ -28,14 +32,15 @@ def copy_to_clipboard(sorted_keyword_list):
     """ Copy the new list to the clipboard."""
     text_to_clipboard = '\n'.join(sorted_keyword_list)
     if platform.system() == 'Darwin':
-        subprocess.run(['pbcopy'], input='\n'.join(text_to_clipboard))
+        subprocess.run(['pbcopy'], universal_newlines=True, input=text_to_clipboard)
     elif platform.system() == 'Windows':
-        subprocess.run(['clip'], input='\n'.join(text_to_clipboard))
+        subprocess.run(['clip'], universal_newlines=True, input=text_to_clipboard)
     else:
-        subprocess.run(['xsel', '-ib'], input='\n'.join(text_to_clipboard))
+        subprocess.run(['xsel', '-ib'], universal_newlines=True, input=text_to_clipboard)
 
 if '__main__' == __name__:
     sorted_keyword_list = main()
     copy_to_clipboard(sorted_keyword_list)
+    print()
     print('\n'.join(sorted_keyword_list))
-    print('\nCopied new keywords to clipboard. Paste into google ads with CMD+V')
+    print('\nKeyword list has been copied to your clipboard!')
