@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+
+
+""" nosleep.py: opens slack and keeps it open and active for the duration of the day """
+
+
+__author__ = "Gerowe Thomas Simmons"
+__copyright__ = "MIT License"
+
+
 import datetime
 import random
 import time
@@ -7,7 +17,7 @@ import logging
 import sys
 
 #Creating and Configuring Logger
-Log_Format = "%(levelname)s - %(asctime)s"
+Log_Format = "%(levelname)s - %(message)s"
 
 logging.basicConfig(filename = "nosleep.log",
                     filemode = "w",
