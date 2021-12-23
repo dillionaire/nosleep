@@ -4,7 +4,9 @@ import subprocess
 
 
 def main():
-    """ create a new list of words containing the brand name and keywords """
+    """ User inputs the brand name and keywords, and the script will create a new
+    list of words containing the brand name and keywords formatted for google ads
+    and copy it to the clipboard."""
     brandname = input("Enter comma seperated branded terms: ")
     keywords = input("Enter comma seperated product keywords: ")
     brnds = [brnd.strip() for brnd in brandname.split(',')]

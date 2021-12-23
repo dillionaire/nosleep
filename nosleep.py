@@ -7,7 +7,7 @@ import logging
 import sys
 
 #Creating and Configuring Logger
-Log_Format = "%(levelname)s %(asctime)s - %(message)s"
+Log_Format = "%(levelname)s - %(asctime)s"
 
 logging.basicConfig(filename = "nosleep.log",
                     filemode = "w",
