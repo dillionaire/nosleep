@@ -12,6 +12,7 @@ pynput = "^1.7.3"
 black = "^21.5b1"
 
 [tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
